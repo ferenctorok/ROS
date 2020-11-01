@@ -1,0 +1,6 @@
+# vscode
+.vscode/
+
+# generated dirs by catkin_make
+build/
+devel/
