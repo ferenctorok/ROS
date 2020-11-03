@@ -13,6 +13,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   sensor_msgs
 )
+find_package( OpenCV REQUIRED )
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -151,10 +152,12 @@ add_dependencies(image_subscriber ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_E
 ## Specify libraries to link a library or executable target against
 target_link_libraries(image_publisher
    ${catkin_LIBRARIES}
+   ${OpenCV_LIBS}
 )
 
 target_link_libraries(image_subscriber
    ${catkin_LIBRARIES}
+   ${OpenCV_LIBS}
 )
 
 
